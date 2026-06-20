@@ -3,9 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
+  staticPageGenerationTimeout: 1000,
 };
 
 export default nextConfig;
