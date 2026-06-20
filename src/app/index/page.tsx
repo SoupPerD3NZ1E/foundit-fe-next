@@ -1,4 +1,12 @@
-import { redirect } from 'next/navigation';
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
 export default function IndexRedirect() {
-  redirect('/choose-role');
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/choose-role');
+  }, [router]);
+  return null;
 }
