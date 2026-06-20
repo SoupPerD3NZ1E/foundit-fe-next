@@ -1,12 +1,7 @@
-'use client';
+import { redirect } from 'next/navigation';
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+export const dynamic = 'force-dynamic';
 
 export default function IndexRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/choose-role');
-  }, [router]);
-  return null;
+  redirect('/choose-role');
 }
