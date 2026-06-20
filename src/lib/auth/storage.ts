@@ -45,4 +45,14 @@ export const storage = {
     localStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem(ROLE_KEY);
   },
+
+  setPendingEmail(email: string): void {
+    localStorage.setItem('pending_email', email);
+  },
+  getPendingEmail(): string | null {
+    return localStorage.getItem('pending_email');
+  },
+  clearPendingEmail(): void {
+    localStorage.removeItem('pending_email');
+  },
 };
